@@ -103,7 +103,7 @@ export default function Faction() {
           </Stack>
         </SimpleGrid>
         <Tabs defaultValue="team" gap={0}>
-          <Tabs.List grow style={{ flexWrap: "nowrap" }}>
+          <Tabs.List grow style={{ flexWrap: "nowrap", overflowX: "auto" }}>
             <Tabs.Tab value="team">Team</Tabs.Tab>
             <Tabs.Tab value="operatives">Operatives</Tabs.Tab>
             <Tabs.Tab value="ploys">Ploys</Tabs.Tab>
