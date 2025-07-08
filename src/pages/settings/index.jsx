@@ -25,7 +25,7 @@ export default function Settings() {
   };
 
   return (
-    <Container py="md" fluid>
+    <Container py="md">
       <Tabs defaultValue="resources" gap={0}>
         <Tabs.List grow style={{ flexWrap: "nowrap" }}>
           <Tabs.Tab value="resources">Resources</Tabs.Tab>

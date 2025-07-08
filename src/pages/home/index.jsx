@@ -79,7 +79,7 @@ export default function Home() {
             slideGap="md"
             initialSlide={0}
           >
-            {factions?.map((faction) => (
+            {factions.slice(0, factions?.length - 1)?.map((faction) => (
               <Carousel.Slide>
                 <Card
                   key={faction.factionid}
@@ -97,9 +97,7 @@ export default function Home() {
                         src={`/img/portraits/${faction.factionid}/${faction.factionid}.jpg`}
                       />
                     </AspectRatio>
-                    <Text lineClamp={4}>
-                      {faction.description.split("<br/>")[0]}
-                    </Text>
+                    <Text lineClamp={4} dangerouslySetInnerHTML={{ __html: `${faction.description}` }}></Text>
                   </Stack>
                 </Card>
               </Carousel.Slide>

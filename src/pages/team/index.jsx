@@ -22,6 +22,10 @@ import { useAppContext } from "../../hooks/app-context";
 import { fetchKillteam } from "../../hooks/use-api/fetchers";
 import useSWR from "swr";
 
+function OrangeText(string) {
+  string.split(" ");
+}
+
 export default function Faction() {
   const { appState, setAppState } = useAppContext();
   const [, params] = useRoute("/fa/:factionId/kt/:killteamId");

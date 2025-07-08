@@ -1,5 +1,6 @@
 import { Link, useRoute } from "wouter";
 import {
+  AspectRatio,
   Card,
   Container,
   Image,
@@ -40,16 +41,19 @@ export default function Faction() {
         href={`/fa/${faction.factionid}/kt/${killteam.killteamid}`}
       >
         <Stack>
-          <Image
-            fit="cover"
-            style={{ objectPosition: "top" }}
-            radius="sm"
-            src={`/img/portraits/${faction.factionid}/${killteam.killteamid}/${killteam.killteamid}.jpg`}
-          />
+          <AspectRatio ratio={900 / 600} maw={1000} mx="auto">
+            <Image
+              fit="cover"
+              style={{ objectPosition: "top" }}
+              radius="sm"
+              src={`/img/portraits/${faction.factionid}/${killteam.killteamid}/${killteam.killteamid}.jpg`}
+            />
+          </AspectRatio>
           <Title order={3}>{killteam.killteamname}</Title>
-          <div
+          <Text
+            lineClamp={4}
             dangerouslySetInnerHTML={{ __html: `${killteam.description}` }}
-          />
+          ></Text>
         </Stack>
       </Card>
     ));

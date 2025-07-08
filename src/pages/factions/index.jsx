@@ -1,4 +1,5 @@
 import {
+  AspectRatio,
   Card,
   Container,
   Image,
@@ -37,20 +38,17 @@ export default function Factions() {
       href={`/fa/${faction.factionid}`}
     >
       <Stack>
-        <Title order={2}>
-          {faction.factionname}
-        </Title>
-        <Image
-          radius="sm"
-          src={`/img/portraits/${faction.factionid}/${faction.factionid}.jpg`}
-        />
-        <Text>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${faction.description.split("<br/>")[0]}`,
-            }}
+        <Title order={2}>{faction.factionname}</Title>
+        <AspectRatio ratio={900 / 600} maw={1000} mx="auto">
+          <Image
+            radius="sm"
+            src={`/img/portraits/${faction.factionid}/${faction.factionid}.jpg`}
           />
-        </Text>
+        </AspectRatio>
+        <Text
+          lineClamp={4}
+          dangerouslySetInnerHTML={{ __html: `${faction.description}` }}
+        ></Text>
       </Stack>
     </Card>
   ));
