@@ -47,8 +47,6 @@ export default function Home() {
     return;
   }
 
-  console.log(factions);
-
   const sortedFactions = sortBy(factions.slice(0, factions?.length - 1), 'factionname');
 
   return (
