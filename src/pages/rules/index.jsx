@@ -19,24 +19,31 @@ Note that a higher numbered Hit and Save stat is worse because your chance of ro
 <li>Wounds: The operative’s starting number of wounds, which is reduced as damage is inflicted upon it.</li>
 </ul>
  <Title order={2}>Weapon stats</Title>
-The kill team selection pages in your kill team’s rules specify what weapons an operative has. If it doesn’t specify, an operative has all the weapons on its datacard.
- - Weapon type:  are ranged weapons for whenever an operative is shooting,  are melee weapons for whenever an operative is fighting or retaliating.
-Atk: The number of attack dice to roll whenever an operative uses this weapon.
-Hit: The result required for successful attack dice whenever an operative uses this weapon.
-Dmg: The damage each attack dice inflicts with this weapon. The first value is its Normal Dmg stat (damage from a normal success), the second value is its Critical Dmg stat (damage from a critical success).
-Sometimes different weapons will have the same primary name but different secondary names, represented in brackets, e.g. “plasma gun (standard)” and “plasma gun (supercharge)”. These are effectively separate profiles of the same weapon, but used as different weapons. If a rule refers to just the primary name, it includes all weapons with that primary name.
-<Title order={2}>Universal Actions</Title>
+ <ul>
+<li>The kill team selection pages in your kill team’s rules specify what weapons an operative has. If it doesn’t specify, an operative has all the weapons on its datacard.</li>
+<li> - Weapon type:  are ranged weapons for whenever an operative is shooting,  are melee weapons for whenever an operative is fighting or retaliating.</li>
+<li>Atk: The number of attack dice to roll whenever an operative uses this weapon.</li>
+<li>Hit: The result required for successful attack dice whenever an operative uses this weapon.</li>
+<li>Dmg: The damage each attack dice inflicts with this weapon. The first value is its Normal Dmg stat (damage from a normal success), the second value is its Critical Dmg stat (damage from a critical success).</li>
+<li>Sometimes different weapons will have the same primary name but different secondary names, represented in brackets, e.g. “plasma gun (standard)” and “plasma gun (supercharge)”. These are effectively separate profiles of the same weapon, but used as different weapons. If a rule refers to just the primary name, it includes all weapons with that primary name.</li>
+</ul>
+<Title order={2}>Actions</Title>
 Actions have effects () and conditions ().  are conditions that must be fulfilled for the operative to perform that action, whilst  are effects when an operative is performing that action, including any requirements when doing so. There are four different types of actions: universal, unique, mission and free.
 
-<Text>Universal actions are the most common actions you will use and can be performed by all operatives unless specified otherwise. The main universal actions can be found below.
-Unique actions are rarer actions in your kill team’s rules. Only specified operatives can perform them.
-Mission actions are specific to the mission or killzone you are playing. If there are any, they will be in your mission pack, killzone rules or the equipment you’ve selected.
-Free actions can only be performed when another rule specifies, and the following rules apply:
-The conditions of the action must be met.
-It does not cost the operative any additional AP to perform the action.
-The operative would still count as performing the action for all other rules purposes. For example, if it performed the action during its activation, it wouldn’t be able to perform it again during that activation.
-If an operative performs a free action outside of their activation, it does not prevent them from performing that action during their activation, or vice versa.</Text>
+<ul><li>Universal actions are the most common actions you will use and can be performed by all operatives unless specified otherwise. The main universal actions can be found below.</li>
+<li>Unique actions are rarer actions in your kill team’s rules. Only specified operatives can perform them.</li>
+<li>Mission actions are specific to the mission or killzone you are playing. If there are any, they will be in your mission pack, killzone rules or the equipment you’ve selected.</li>
+<li>Free actions can only be performed when another rule specifies, and the following rules apply:
 
+</li>
+<ul>
+  <li>The conditions of the action must be met.</li>
+  <li>It does not cost the operative any additional AP to perform the action.</li>
+  <li>The operative would still count as performing the action for all other rules purposes. For example, if it performed the action during its activation, it wouldn’t be able to perform it again during that activation.</li>
+  <li>If an operative performs a free action outside of their activation, it does not prevent them from performing that action during their activation, or vice versa.</li>
+</ul>
+
+</ul>
 <Title order={3}>Reposition</Title>
 Reposition 1AP
 Move the active operative up to its Move stat to a location it can be placed. This must be done in one or more straight-line increments, and increments are always rounded up to the nearest inch.
@@ -48,7 +55,7 @@ Heavy terrainThe operative has a Move stat of 6”. It first moves in a straight
 These movements are made in straight-line increments, instead of curving around the corner.
 
 Heavy terrainThe operative first moves in a straight-line increment of 0.5” to clear the corner of a wall, but as increments are rounded up, this is treated as 1”. It then moves in a straight-line increment of 2.75”, but again, this is rounded up to 3”. It has moved 4” in total.
-Dash
+<Title order={3}>Dash</Title>
 Dash
 1AP
 The same as the Reposition action, except don’t use the active operative’s Move stat – it can move up to 3” instead. In addition, it cannot climb during this move, but it can drop and jump.
