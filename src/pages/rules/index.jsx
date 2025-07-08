@@ -4,37 +4,40 @@ export default function Rules() {
   return (
     <Container py="md">
       <Title order={1}>Quick Reference</Title>
-       Operative stats
-APL (Action point limit): The total cost of actions an operative can perform during its activation, and a stat used to determine control of markers. Some rare rules change an operative’s APL. Regardless of how many APL stat changes an operative is affected by, the total can never be more than -1 or +1 from its normal APL. This takes precedence over all stat changes.
-If an operative has an APL of 2, and two rules say to add 1 to the operative’s APL, it would have an APL of 3.
+      <Text>This section serves as a quick reference to use while playing games of kill team.</Text>
+       <Title order={2}>Operative stats</Title>
+<ul>
+  <li><b>APL (Action point limit):</b> The total cost of actions an operative can perform during its activation, and a stat used to determine control of markers. Some rare rules change an operative’s APL. Regardless of how many APL stat changes an operative is affected by, the total can never be more than -1 or +1 from its normal APL. This takes precedence over all stat changes.
+If an operative has an APL of 2, and two rules say to add 1 to the operative’s APL, it would have an APL of 3.</li>
 
-Move: The operative’s move distance, used when performing the Reposition, Fall Back and Charge actions. An operative’s Move stat can never be changed to less than 4”. This takes precedence over all stat changes.
-If an operative’s stats are changed during an action, apply the change once the action has been completed.
+<li>Move: The operative’s move distance, used when performing the Reposition, Fall Back and Charge actions. An operative’s Move stat can never be changed to less than 4”. This takes precedence over all stat changes.
+If an operative’s stats are changed during an action, apply the change once the action has been completed.</li>
 
-Save: The result required for successful defence dice whenever another operative is shooting the operative.
-Note that a higher numbered Hit and Save stat is worse because your chance of rolling a success decreases. This is important if a rule requires you to improve or worsen such a stat. For example, a 4+ Hit stat worsened by 1 is 5+.
+<li>Save: The result required for successful defence dice whenever another operative is shooting the operative.
+Note that a higher numbered Hit and Save stat is worse because your chance of rolling a success decreases. This is important if a rule requires you to improve or worsen such a stat. For example, a 4+ Hit stat worsened by 1 is 5+.</li>
 
-Wounds: The operative’s starting number of wounds, which is reduced as damage is inflicted upon it.
- Weapon stats
+<li>Wounds: The operative’s starting number of wounds, which is reduced as damage is inflicted upon it.</li>
+</ul>
+ <Title order={2}>Weapon stats</Title>
 The kill team selection pages in your kill team’s rules specify what weapons an operative has. If it doesn’t specify, an operative has all the weapons on its datacard.
  - Weapon type:  are ranged weapons for whenever an operative is shooting,  are melee weapons for whenever an operative is fighting or retaliating.
 Atk: The number of attack dice to roll whenever an operative uses this weapon.
 Hit: The result required for successful attack dice whenever an operative uses this weapon.
 Dmg: The damage each attack dice inflicts with this weapon. The first value is its Normal Dmg stat (damage from a normal success), the second value is its Critical Dmg stat (damage from a critical success).
 Sometimes different weapons will have the same primary name but different secondary names, represented in brackets, e.g. “plasma gun (standard)” and “plasma gun (supercharge)”. These are effectively separate profiles of the same weapon, but used as different weapons. If a rule refers to just the primary name, it includes all weapons with that primary name.
-Universal Actions
+<Title order={2}>Universal Actions</Title>
 Actions have effects () and conditions ().  are conditions that must be fulfilled for the operative to perform that action, whilst  are effects when an operative is performing that action, including any requirements when doing so. There are four different types of actions: universal, unique, mission and free.
 
-Universal actions are the most common actions you will use and can be performed by all operatives unless specified otherwise. The main universal actions can be found below.
+<Text>Universal actions are the most common actions you will use and can be performed by all operatives unless specified otherwise. The main universal actions can be found below.
 Unique actions are rarer actions in your kill team’s rules. Only specified operatives can perform them.
 Mission actions are specific to the mission or killzone you are playing. If there are any, they will be in your mission pack, killzone rules or the equipment you’ve selected.
 Free actions can only be performed when another rule specifies, and the following rules apply:
 The conditions of the action must be met.
 It does not cost the operative any additional AP to perform the action.
 The operative would still count as performing the action for all other rules purposes. For example, if it performed the action during its activation, it wouldn’t be able to perform it again during that activation.
-If an operative performs a free action outside of their activation, it does not prevent them from performing that action during their activation, or vice versa.
+If an operative performs a free action outside of their activation, it does not prevent them from performing that action during their activation, or vice versa.</Text>
 
-Reposition
+<Title order={3}>Reposition</Title>
 Reposition
 1AP
 Move the active operative up to its Move stat to a location it can be placed. This must be done in one or more straight-line increments, and increments are always rounded up to the nearest inch.
