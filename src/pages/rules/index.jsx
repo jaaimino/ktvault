@@ -51,10 +51,12 @@ It cannot move within control range of an enemy operative, unless one or more ot
 An operative cannot perform this action while within control range of an enemy operative, or during the same activation in which it performed the Fall Back or Charge action.
 Moving in increments allows for greater precision and clarity.
 
-Heavy terrainThe operative has a Move stat of 6”. It first moves in a straight-line increment of 2” to clear the corner of a wall. It then moves in a straight-line increment of 4” — the remaining distance it can move without exceeding its Move stat.
+<Title order={4}>Heavy terrain</Title>
+The operative has a Move stat of 6”. It first moves in a straight-line increment of 2” to clear the corner of a wall. It then moves in a straight-line increment of 4” — the remaining distance it can move without exceeding its Move stat.
 These movements are made in straight-line increments, instead of curving around the corner.
 
-Heavy terrainThe operative first moves in a straight-line increment of 0.5” to clear the corner of a wall, but as increments are rounded up, this is treated as 1”. It then moves in a straight-line increment of 2.75”, but again, this is rounded up to 3”. It has moved 4” in total.
+Heavy terrain
+The operative first moves in a straight-line increment of 0.5” to clear the corner of a wall, but as increments are rounded up, this is treated as 1”. It then moves in a straight-line increment of 2.75”, but again, this is rounded up to 3”. It has moved 4” in total.
 <Title order={3}>Dash</Title>
 Dash
 1AP

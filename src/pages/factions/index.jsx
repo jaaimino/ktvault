@@ -2,6 +2,7 @@ import {
   AspectRatio,
   Card,
   Container,
+  Grid,
   Image,
   LoadingOverlay,
   SimpleGrid,
@@ -29,30 +30,41 @@ export default function Factions() {
     return;
   }
 
-  const sortedFactions = [...sortBy(factions.slice(0, factions?.length - 1), 'factionname'), ...factions.slice(factions?.length - 1, factions?.length)];
+  const sortedFactions = [
+    ...sortBy(factions.slice(0, factions?.length - 1), "factionname"),
+    ...factions.slice(factions?.length - 1, factions?.length),
+  ];
 
   const cards = sortedFactions?.map((faction) => (
     <Card
       key={faction.factionid}
-      p="md"
+      p="sm"
       radius="sm"
       component={Link}
       className={classes.card}
       href={`/fa/${faction.factionid}`}
     >
-      <Stack>
-        <Title order={2}>{faction.factionname}</Title>
-        <AspectRatio ratio={900 / 600} maw={1000} mx="auto">
+      <Grid>
+        <Grid.Col span={5}>
           <Image
+            h="100%"
+            fit="cover"
+            style={{ objectPosition: "top" }}
             radius="sm"
             src={`/img/portraits/${faction.factionid}/${faction.factionid}.jpg`}
           />
-        </AspectRatio>
-        <Text
-          lineClamp={4}
-          dangerouslySetInnerHTML={{ __html: `${faction.description}` }}
-        ></Text>
-      </Stack>
+        </Grid.Col>
+        <Grid.Col span={7}>
+          <Stack gap="sm">
+            <Title order={3}>{faction.factionname}</Title>
+            <Text
+              size="sm"
+              lineClamp={3}
+              dangerouslySetInnerHTML={{ __html: `${faction.description}` }}
+            ></Text>
+          </Stack>
+        </Grid.Col>
+      </Grid>
     </Card>
   ));
 

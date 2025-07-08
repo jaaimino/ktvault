@@ -3,6 +3,9 @@ import {
   AspectRatio,
   Card,
   Container,
+  Flex,
+  Grid,
+  Group,
   Image,
   LoadingOverlay,
   SimpleGrid,
@@ -35,26 +38,32 @@ export default function Faction() {
       <Card
         key={killteam.killteamid}
         className={classes.card}
-        p="md"
+        p="sm"
         radius="sm"
         component={Link}
         href={`/fa/${faction.factionid}/kt/${killteam.killteamid}`}
       >
-        <Stack>
-          <AspectRatio ratio={900 / 600} maw={1000} mx="auto">
+        <Grid>
+          <Grid.Col span={5}>
             <Image
+              h="100%"
               fit="cover"
               style={{ objectPosition: "top" }}
               radius="sm"
               src={`/img/portraits/${faction.factionid}/${killteam.killteamid}/${killteam.killteamid}.jpg`}
             />
-          </AspectRatio>
-          <Title order={3}>{killteam.killteamname}</Title>
-          <Text
-            lineClamp={4}
-            dangerouslySetInnerHTML={{ __html: `${killteam.description}` }}
-          ></Text>
-        </Stack>
+          </Grid.Col>
+          <Grid.Col span={7}>
+            <Stack gap="sm">
+              <Title order={3}>{killteam.killteamname}</Title>
+              <Text
+                size="sm"
+                lineClamp={3}
+                dangerouslySetInnerHTML={{ __html: `${killteam.description}` }}
+              ></Text>
+            </Stack>
+          </Grid.Col>
+        </Grid>
       </Card>
     ));
   return (

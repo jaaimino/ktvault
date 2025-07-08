@@ -78,7 +78,7 @@ export default function Home() {
         <Stack>
           <Title ta="center">Factions</Title>
           <Carousel
-            slideSize={{ base: "75%", sm: "50%", md: "33.333333%" }}
+            slideSize={{ base: "75%", sm: "50%", md: "33.3%", lg: "25%" }}
             slideGap="md"
             initialSlide={0}
           >
@@ -86,7 +86,7 @@ export default function Home() {
               <Carousel.Slide>
                 <Card
                   key={faction.factionid}
-                  p="md"
+                  p="sm"
                   radius="sm"
                   component={Link}
                   className={classes.card}
@@ -94,7 +94,7 @@ export default function Home() {
                 >
                   <Stack>
                     <Title order={2}>{faction.factionname}</Title>
-                    <AspectRatio ratio={900 / 600} maw={1000} mx="auto">
+                    <AspectRatio ratio={9 / 6} mx="auto">
                       <Image
                         radius="sm"
                         src={`/img/portraits/${faction.factionid}/${faction.factionid}.jpg`}
