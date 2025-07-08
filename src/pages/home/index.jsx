@@ -18,6 +18,7 @@ import { Link } from "wouter";
 import useSWR from "swr";
 import { fetchFactions } from "../../hooks/use-api/fetchers";
 import news from "../../data/news.json";
+import { sortBy } from "lodash";
 
 function News() {
   const options = { year: "numeric", month: "long", day: "numeric" };
@@ -45,6 +46,10 @@ export default function Home() {
   if (!factions?.length) {
     return;
   }
+
+  console.log(factions);
+
+  const sortedFactions = sortBy(factions.slice(0, factions?.length - 1), 'factionname');
 
   return (
     <>
@@ -79,7 +84,7 @@ export default function Home() {
             slideGap="md"
             initialSlide={0}
           >
-            {factions.slice(0, factions?.length - 1)?.map((faction) => (
+            {sortedFactions?.map((faction) => (
               <Carousel.Slide>
                 <Card
                   key={faction.factionid}

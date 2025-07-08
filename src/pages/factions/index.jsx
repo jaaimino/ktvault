@@ -13,6 +13,7 @@ import classes from "./factions.module.css";
 import { Link } from "wouter";
 import useSWR from "swr";
 import { fetchFactions } from "../../hooks/use-api/fetchers";
+import { sortBy } from "lodash";
 
 export default function Factions() {
   const { data: factions, isFetching: isFetchingFactions } = useSWR(
@@ -28,7 +29,9 @@ export default function Factions() {
     return;
   }
 
-  const cards = factions?.map((faction) => (
+  const sortedFactions = [...sortBy(factions.slice(0, factions?.length - 1), 'factionname'), ...factions.slice(factions?.length - 1, factions?.length)];
+
+  const cards = sortedFactions?.map((faction) => (
     <Card
       key={faction.factionid}
       p="md"
