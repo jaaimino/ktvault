@@ -63,7 +63,7 @@ export default function Settings() {
                   <Title order={3}>Homebrew</Title>
                   <Text>Shows homebrew teams and scenarios if enabled.</Text>
                   <SegmentedControl
-                    value={settings?.homebrew.toString()}
+                    value={settings?.homebrew?.toString()}
                     onChange={(value) => updateSettings("homebrew", value === "true")}
                     color="orange"
                     data={[
