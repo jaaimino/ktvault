@@ -2,7 +2,7 @@ import { Container, Stack, Text, Title } from "@mantine/core";
 
 export default function Rules() {
   return (
-    <Container py="md" fluid>
+    <Container py="md">
       <Title order={2}>Datacards</Title>
       <Text>Datacards contain specific rules for each operative, including key stats.</Text>
  <Title order={3}>Agent type</Title>

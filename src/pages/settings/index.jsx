@@ -41,7 +41,18 @@ export default function Settings() {
             />
           </Stack>
           <Stack my="md">
-            <Title order={3}>Community</Title>
+            <div>
+              <Title order={3}>Community</Title>
+              This is a community run project. To get involved, you can visit
+              one of the links below.
+              <ul>
+                <li>
+                  <a href="https://github.com/jaaimino/ktvault" target="_blank">
+                    GitHub
+                  </a>
+                </li>
+              </ul>
+            </div>
           </Stack>
         </Tabs.Panel>
         <Tabs.Panel value="settings">
