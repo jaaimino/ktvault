@@ -29,7 +29,7 @@ export default function OperativeCard(props) {
         }
         return "var(--mantine-color-orange-8)";
     }
-    const operativeStatGrid = operative?.edition === "kt21" ? (settings.display === "list" ? 6 : 3) : (settings.display === "list" ? 4 : 2);
+    const operativeStatGrid = 2;
     if (!operative) {
         return <></>;
     }
@@ -169,9 +169,9 @@ export default function OperativeCard(props) {
                 <Collapse in={opened} spacing="xs">
                     <Stack>
                         <Stack>
-                            <SimpleGrid cols={{ base: settings.display === "card" ? 2 : 1 }} spacing="xs">
+                            <SimpleGrid cols={{ base: 2 }} spacing="xs">
                                 {/* Op Portrait */}
-                                {settings.display === "card" && <Image
+                                <Image
                                     onClick={() => modals.open({
                                         size: "xl",
                                         title: <Title order={2}>{operative.opname}</Title>,
@@ -186,7 +186,7 @@ export default function OperativeCard(props) {
                                     style={{ objectPosition: "top", cursor: 'pointer' }}
                                     h={140} radius="sm"
                                     src={operative.rosteropid ? `${API_PATH}/operativeportrait.php?roid=${operative.rosteropid}&expire=${imageExpire}` : `/img/portraits/${operative.factionid}/${operative.killteamid}/${operative.fireteamid}/${operative.opid}.jpg`}
-                                />}
+                                />
                                 {/* Op Stats */}
                                 <SimpleGrid cols={{ base: operativeStatGrid }} spacing={5}>
                                     <Paper><Stack h="100%" justify="center" align="center" gap={5}><Text fw={700}>APL</Text><Group gap={2}><IconTriangleInverted color=" var(--mantine-color-orange-8)" size={20} /><Text fw={700}>{operative.APL}</Text></Group></Stack></Paper>
