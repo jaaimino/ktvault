@@ -38,8 +38,7 @@ The operative would still count as performing the action for all other rules pur
 If an operative performs a free action outside of their activation, it does not prevent them from performing that action during their activation, or vice versa.</Text>
 
 <Title order={3}>Reposition</Title>
-Reposition
-1AP
+Reposition 1AP
 Move the active operative up to its Move stat to a location it can be placed. This must be done in one or more straight-line increments, and increments are always rounded up to the nearest inch.
 It cannot move within control range of an enemy operative, unless one or more other friendly operatives are already within control range of that enemy operative, in which case it can move within control range of that enemy operative but cannot finish the move there.
 An operative cannot perform this action while within control range of an enemy operative, or during the same activation in which it performed the Fall Back or Charge action.
@@ -56,29 +55,27 @@ The same as the Reposition action, except don’t use the active operative’s M
 An operative cannot perform this action while within control range of an enemy operative, or during the same activation in which it performed the Charge action.
 Since operatives cannot perform the same action more than once in their activation, Dash actions are the way operatives can move a greater distance.
 
-Fall Back
-Fall Back
-2AP
+<Title order={3}>Fall Back</Title>
+Fall Back 2AP
 The same as the Reposition action, except the active operative can move within control range of an enemy operative, but cannot finish the move there.
 An operative cannot perform this action unless an enemy operative is within its control range. It cannot perform this action during the same activation in which it performed the Reposition or Charge action.
 If an operative is activated within the control range of an enemy operative, the Fall Back action is a way to withdraw. It costs 2AP, so most operatives will not be able to perform more actions in that activation.
 
-Charge
-Charge
-1AP
+<Title order={3}>Charge</Title>
+Charge 1AP
 The same as the Reposition action, except the active operative can move an additional 2”.
 It can move, and must finish the move, within control range of an enemy operative. If it moves within control range of an enemy operative that no other friendly operatives are within control range of, it cannot leave that operative’s control range.
 An operative cannot perform this action while it has a Conceal order, if it’s already within control range of an enemy operative, or during the same activation in which it performed the Reposition, Dash or Fall Back action.
 Charge actions allow operatives to effectively pin down enemies, but since they need to be in an engagement order to do so, they may become vulnerable to enemy shooting.
 
-Pick Up Marker
+<Title order={3}>Pick Up Marker</Title>
 Pick Up Marker
 1AP
 Remove a marker the active operative controls that the Pick Up Marker action can be performed upon. That operative is now carrying, contesting and controlling that marker.
 An operative cannot perform this action while within control range of an enemy operative, or while it’s already carrying a marker.
 If the Pick Up Marker action can be performed on a marker, it will be specified elsewhere, such as in your mission pack.
 
-Place Marker
+<Title order={3}>Place Marker</Title>
 Place Marker
 1AP
 Place a marker the active operative is carrying within its control range.
@@ -86,7 +83,7 @@ If an operative carrying a marker is incapacitated (see damage on pg 47), it mus
 An operative cannot perform this action during the same activation in which it already performed the Pick Up Marker action (unless incapacitated).
 Similarly, if there is any marker carried by the operative, it will be specified elsewhere.
 
-Shoot
+<Title order={3}>Shoot</Title>
 Shoot
 1AP
 Shoot with the active operative by following the sequence below. The active operative’s player is the attacker. The selected enemy operative’s player is the defender.
@@ -141,7 +138,7 @@ Any operatives that were incapacitated (see damage on pg 47) are removed after t
 
 Some weapons fire multiple times in the same action, like those with the Area and Torrent weapon rules (pg. 111). Therefore, operatives do not withdraw until the entire action is resolved.
 
-Fight
+<Title order={3}>Fight</Title>
 Fight
 1AP
 Fight with the active operative by following the sequence below. The active operative’s player is the attacker. The selected enemy operative’s player is the defender.
@@ -182,7 +179,7 @@ A normal success can block a normal success.
 A critical success can block a normal success or a critical success.
 You can still block even if your opponent has no unresolved successes left. This is useful if you don’t want to incapacitate the enemy operative yet.
 
-Counteract
+<Title order={3}>Counteract</Title>
 Counteract
 0AP
 When you would activate a ready friendly operative, if all your operatives are expended but your opponent still has ready operatives, you can select an expended friendly operative with an Engage order to perform a 1AP action for free (Excluding Guard). Each operative can only counteract once per turning point, and cannot move more than 2", or must be set up wholly within 2" if it’s removed and set up again, while counteracting (this is not a change to its Move stat, and takes precedence over all other rules). Counteracting is optional, so you can choose not to. In either case, activation alternates back to your opponent afterwards.
