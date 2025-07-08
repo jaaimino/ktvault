@@ -16,6 +16,7 @@ import {
 import classes from "./faction.module.css";
 import useSWR from "swr";
 import { fetchFaction } from "../../hooks/use-api/fetchers";
+import { useSettings } from "../../hooks/use-settings";
 
 export default function Faction() {
   const [, params] = useRoute("/fa/:factionId");
@@ -26,6 +27,7 @@ export default function Faction() {
     ],
     fetchFaction
   );
+  const [settings] = useSettings();
   if (isFetchingFaction) {
     return <LoadingOverlay visible={isFetchingFaction} />;
   }
@@ -34,6 +36,7 @@ export default function Faction() {
   }
   const cards = faction.killteams
     ?.filter((killteam) => killteam.edition === "kt24")
+    ?.filter((killteam) => (settings.homebrew ? true : !killteam.isCustom))
     ?.map((killteam) => (
       <Card
         key={killteam.killteamid}
