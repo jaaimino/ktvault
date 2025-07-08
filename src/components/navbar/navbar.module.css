@@ -1,0 +1,19 @@
+.root {
+  flex-direction: column;
+  flex: 1;
+  padding: 3px var(--mantine-spacing-lg) !important;
+  font-size: var(--mantine-font-size-sm) !important;
+}
+
+.label {
+  font-size: var(--mantine-font-size-sm) !important;
+}
+
+.section {
+  /* Apply styles only to left section */
+  &[data-position='left'] {
+    font-size: var(--mantine-font-size-sm) !important;
+    padding-inline-end: 0;
+    margin-inline-end: 0;
+  }
+}
