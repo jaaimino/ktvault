@@ -46,20 +46,21 @@ export default function Factions() {
     >
       <Grid>
         <Grid.Col span={5}>
-          <Image
-            h="100%"
-            fit="cover"
-            style={{ objectPosition: "top" }}
-            radius="sm"
-            src={`/img/portraits/${faction.factionid}/${faction.factionid}.jpg`}
-          />
+          <AspectRatio ratio={1} maw={300} mx="auto">
+            <Image
+              fit="cover"
+              style={{ objectPosition: "top", height: "100%" }}
+              radius="sm"
+              src={`/img/portraits/${faction.factionid}/${faction.factionid}.jpg`}
+            />
+          </AspectRatio>
         </Grid.Col>
         <Grid.Col span={7}>
           <Stack gap="sm">
             <Title order={3}>{faction.factionname}</Title>
             <Text
               size="sm"
-              lineClamp={3}
+              lineClamp={5}
               dangerouslySetInnerHTML={{ __html: `${faction.description}` }}
             ></Text>
           </Stack>

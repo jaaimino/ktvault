@@ -1,7 +1,7 @@
 .root {
   flex-direction: column;
   flex: 1;
-  padding: 3px var(--mantine-spacing-lg) !important;
+  padding: 3px var(--mantine-spacing-sm) !important;
   font-size: var(--mantine-font-size-sm) !important;
 }
 

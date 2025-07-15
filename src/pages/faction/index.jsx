@@ -48,20 +48,21 @@ export default function Faction() {
       >
         <Grid>
           <Grid.Col span={5}>
-            <Image
-              h="100%"
-              fit="cover"
-              style={{ objectPosition: "top" }}
-              radius="sm"
-              src={`/img/portraits/${faction.factionid}/${killteam.killteamid}/${killteam.killteamid}.jpg`}
-            />
+            <AspectRatio ratio={1}>
+              <Image
+                fit="cover"
+                style={{ objectPosition: "top", height: "100%" }}
+                radius="sm"
+                src={`/img/portraits/${faction.factionid}/${killteam.killteamid}/${killteam.killteamid}.jpg`}
+              />
+            </AspectRatio>
           </Grid.Col>
           <Grid.Col span={7}>
             <Stack gap="sm">
               <Title order={3}>{killteam.killteamname}</Title>
               <Text
+                lineClamp={5}
                 size="sm"
-                lineClamp={3}
                 dangerouslySetInnerHTML={{ __html: `${killteam.description}` }}
               ></Text>
             </Stack>

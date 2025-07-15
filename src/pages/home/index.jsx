@@ -3,6 +3,7 @@ import {
   Box,
   Card,
   Container,
+  Grid,
   Group,
   Image,
   Progress,
@@ -47,7 +48,10 @@ export default function Home() {
     return;
   }
 
-  const sortedFactions = sortBy(factions.slice(0, factions?.length - 1), 'factionname');
+  const sortedFactions = sortBy(
+    factions.slice(0, factions?.length - 1),
+    "factionname"
+  );
 
   return (
     <>
@@ -78,7 +82,7 @@ export default function Home() {
         <Stack>
           <Title ta="center">Factions</Title>
           <Carousel
-            slideSize={{ base: "75%", sm: "50%", md: "33.3%", lg: "25%" }}
+            slideSize={{ base: "100%", sm: "50%", md: "33%", lg: "25%" }}
             slideGap="md"
             initialSlide={0}
           >
@@ -92,16 +96,30 @@ export default function Home() {
                   className={classes.card}
                   href={`/fa/${faction.factionid}`}
                 >
-                  <Stack>
-                    <Title order={2}>{faction.factionname}</Title>
-                    <AspectRatio ratio={9 / 6} mx="auto">
-                      <Image
-                        radius="sm"
-                        src={`/img/portraits/${faction.factionid}/${faction.factionid}.jpg`}
-                      />
-                    </AspectRatio>
-                    <Text lineClamp={4} dangerouslySetInnerHTML={{ __html: `${faction.description}` }}></Text>
-                  </Stack>
+                  <Grid>
+                    <Grid.Col span={5}>
+                      <AspectRatio ratio={1}>
+                        <Image
+                          fit="cover"
+                          style={{ objectPosition: "top", height: "100%" }}
+                          radius="sm"
+                          src={`/img/portraits/${faction.factionid}/${faction.factionid}.jpg`}
+                        />
+                      </AspectRatio>
+                    </Grid.Col>
+                    <Grid.Col span={7}>
+                      <Stack gap="sm">
+                        <Title order={3}>{faction.factionname}</Title>
+                        <Text
+                          size="sm"
+                          lineClamp={5}
+                          dangerouslySetInnerHTML={{
+                            __html: `${faction.description}`,
+                          }}
+                        ></Text>
+                      </Stack>
+                    </Grid.Col>
+                  </Grid>
                 </Card>
               </Carousel.Slide>
             ))}
